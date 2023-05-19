@@ -9,3 +9,17 @@ code:6da3
 # Run voc_annotation.py to generate 2012_train.txt and 2012_val.txt
 python voc_annotation.py
 ```
+
+## Train
+```
+# Start training with: 
+python train.py
+```
+
+## Predict
+```
+# Detect a single image: 
+python predict.py --mode image --input test.jpg
+# Detection Video: 
+python predict.py --mode video --input test.mp4
+```
