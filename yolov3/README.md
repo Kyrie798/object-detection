@@ -1,7 +1,8 @@
 # YOLO-v3
 
 ## Weights
-You can download pretrained weights (yolo_weights.pth) from https://pan.baidu.com/s/1hCV4kg8NyStkywLiAeEr3g  
+You can download pretrained weights (yolo_weights.pth) from https://pan.baidu.com/s/1hCV4kg8NyStkywLiAeEr3g   
+and put it into weights/yolo_weights.pth
 code:6da3
 
 ## Prepare
