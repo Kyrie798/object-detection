@@ -14,7 +14,8 @@ if __name__ == "__main__":
 
     yolo = YOLO()
 
-    video_save_path = "detect.mp4"
+    video_save_path = "video_detect.mp4"
+    camera_save_path = "camera_detect.mp4"
     video_fps = 25.0
 
     if opt.mode == "image":
@@ -70,12 +71,12 @@ if __name__ == "__main__":
         cv2.destroyAllWindows()
         
         
-    if opt.mode == "video":
+    if opt.mode == "camera":
         capture = cv2.VideoCapture(0)
-        if video_save_path !="":
-            fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        if camera_save_path !="":
+            fourcc = cv2.VideoWriter_fourcc(*'XVID')
             size = (int(capture.get(cv2.CAP_PROP_FRAME_WIDTH)), int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-            out = cv2.VideoWriter(video_save_path, fourcc, video_fps, size)
+            out = cv2.VideoWriter(camera_save_path, fourcc, video_fps, size)
 
         ref, frame = capture.read()
 
@@ -101,7 +102,7 @@ if __name__ == "__main__":
             
             cv2.imshow("video",frame)
             c= cv2.waitKey(1) & 0xff 
-            if video_save_path!="":
+            if camera_save_path!="":
                 out.write(frame)
             
             # ESC
@@ -111,7 +112,7 @@ if __name__ == "__main__":
 
         print("Video Detection Done!")
         capture.release()
-        if video_save_path!="":
-            print("Save processed video to the path :" + video_save_path)
+        if camera_save_path!="":
+            print("Save processed video to the path :" + camera_save_path)
             out.release()
         cv2.destroyAllWindows()
