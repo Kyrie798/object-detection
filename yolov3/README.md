@@ -22,6 +22,6 @@ If you want to use your own training weights, please modify the self.model_path 
 ```
 # Detect a single image: 
 python predict.py --mode image --input test.jpg
-# Detection Video: 
+# Detection video: 
 python predict.py --mode video --input test.mp4
 ```
