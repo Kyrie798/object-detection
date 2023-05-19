@@ -18,7 +18,7 @@ python train.py
 ```
 
 ## Predict
-If you want to use your own training weights, please modify the self model in yolo. py_ Path and self. classes_ path
+If you want to use your own training weights, please modify the self.model_path and self.classes_path in yolo.py
 ```
 # Detect a single image: 
 python predict.py --mode image --input test.jpg
